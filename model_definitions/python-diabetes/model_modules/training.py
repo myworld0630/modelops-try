@@ -17,10 +17,15 @@ def train(context: ModelContext, **kwargs):
     aoa_create_context()
 
     feature_names = context.dataset_info.feature_names
+    print("context.dataset_info.feature_names: " + feature_names)
+
     target_name = context.dataset_info.target_names[0]
+    print("context.dataset_info.target_name: " + target_name)
 
     # read training dataset from Teradata and convert to pandas
     train_df = DataFrame.from_query(context.dataset_info.sql)
+    print("context.dataset_info.sql: " + context.dataset_info.sql)
+
     train_pdf = train_df.to_pandas(all_rows=True)
 
     # split data into X and y

@@ -2,7 +2,7 @@
   "id": "bf6a52b2-b595-4358-ac4f-24fb41a85c45",
   "name": "R GBM Model",
   "description": "R GBM for Diabete",
-  "language": "SAS",
+  "language": "R",
 
   "automation": {
     "training": {
