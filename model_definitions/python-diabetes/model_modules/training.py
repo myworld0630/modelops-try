@@ -22,12 +22,15 @@ def train(context: ModelContext, **kwargs):
 
     target_name = context.dataset_info.target_names[0]
     print("context.dataset_info.target_name: ")
-    print(target_names[0])
+    print(target_name)
 
     # read training dataset from Teradata and convert to pandas
     train_df = DataFrame.from_query(context.dataset_info.sql)
     print("context.dataset_info.sql: ")
     print(context.dataset_info.sql)
+
+    print("aoa ModelContext:")
+    print(context)
 
     train_pdf = train_df.to_pandas(all_rows=True)
 
