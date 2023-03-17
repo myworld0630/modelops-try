@@ -14,6 +14,4 @@ import pandas as pd
 
 
 def evaluate(context: ModelContext, **kwargs):
-
     aoa_create_context()
-
