@@ -40,6 +40,7 @@ def train(context: ModelContext, **kwargs):
 
     # export model artefacts
     joblib.dump(model, f"{context.artifact_output_path}/model.joblib")
+    print("{context.artifact_output_path}/model.joblib")
 
     # we can also save as pmml so it can be used for In-Vantage scoring etc.
     xgboost_to_pmml(pipeline=model, col_names=feature_names, target_name=target_name,
